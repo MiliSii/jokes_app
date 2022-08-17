@@ -20,8 +20,8 @@ public class JokeController {
 
     //implement controller method
     @RequestMapping({"/",""})
-    public String showJokes(Model model){
-        model.addAttribute("jokes", jokeService.getJoke());
+    public String showJoke(Model model){
+        model.addAttribute("joke", jokeService.getJoke());
         return "index";
 //we're adding in an attribute to the model with the property of joke, and then we'll
 //add the joke string from the joke service, and then we return the string index. That's going
